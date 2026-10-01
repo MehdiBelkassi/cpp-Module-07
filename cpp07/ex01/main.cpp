@@ -1,7 +1,6 @@
-#include <iostream>
-#include <cstdio>
-template <typename T, typename F>
+#include "Iter.hpp"
 
+template <typename T, typename F>
 void iter(T *address , const int len , F func)
 {
     printf("len = %d\naddress = %p\n", len, address);
@@ -29,5 +28,5 @@ void add(T &value)
 int main()
 {
     int a[]= {1, 2 ,3, 4};
-    iter(a, 4, add<char>);
+    iter(a, 4, add<int>);
 }

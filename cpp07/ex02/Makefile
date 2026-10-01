@@ -1,9 +1,9 @@
-NAME = Iter
+NAME = array
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-HPP = Iter.hpp
+HPP = Array.hpp
 
 all: $(NAME)
 
