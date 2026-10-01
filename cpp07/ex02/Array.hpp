@@ -8,7 +8,7 @@ class Array
         T* content;
         unsigned int len;
     public:
-        Array(); //-> create an empty array
+        Array();
         Array(unsigned int n);
         Array (const Array& other);
         Array& operator=(const Array& other);
