@@ -1,7 +1,9 @@
 #pragma once
 
-template <class T>
+#include <iostream>
 
+
+template <class T>
 class Array
 {
     private:
@@ -17,3 +19,6 @@ class Array
         const T& operator[](int n) const;
         unsigned int size() const;
 };
+
+
+#include "Array.tpp"

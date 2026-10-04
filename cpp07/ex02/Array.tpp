@@ -1,20 +1,23 @@
-#include "Array.hpp"
+// #include "Array.hpp"
+
 template <class T>
 Array<T>::Array(): content(NULL),len(0)
 {
-
+    std::cout << "Default constructor called\n";
 }
 
 template <class T>
 Array<T>::Array(unsigned int n)
 {
-    content = new T[n](); // () the two braces initialize the array with 0 (weird)
+    std::cout << "Constructor called\n";
+    content = new T[n];
     len = n;
 }
 
 template <class T>
 Array<T>::Array(const Array& other) : content(NULL), len(other.len)
 {
+    std::cout << "Copy Constructor called\n";
     content = new T[len];
 
     unsigned int i = 0;
@@ -28,6 +31,7 @@ Array<T>::Array(const Array& other) : content(NULL), len(other.len)
 template <class T>
 Array<T>& Array<T>::operator=(const Array<T>& other)
 {
+    std::cout << "Copy assignment operator called\n";
     if (this != &other)
     {
         delete[] content;
@@ -44,7 +48,6 @@ Array<T>& Array<T>::operator=(const Array<T>& other)
     return (*this);
 }
 
-
 template <class T>
 unsigned int Array<T>::size() const
 {
@@ -54,6 +57,7 @@ unsigned int Array<T>::size() const
 template <class T>
 Array<T>::~Array()
 {
+    std::cout << "Destructor called\n";
     delete[] content;
 }
 

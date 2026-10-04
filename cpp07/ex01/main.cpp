@@ -3,6 +3,6 @@
 
 int main()
 {
-    char a[]= "mehdi";
-    Iter(a, 5, print<char>);
+    const int a[]= {0, 1, 2, 3};
+    Iter(a, 5, print<int>);
 }
